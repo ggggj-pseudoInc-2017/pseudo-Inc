@@ -20,7 +20,6 @@ public class CameraMoving : MonoBehaviour {
     {
         xPos = player.position.x;
         zPos = player.position.z;
-        Debug.Log(xPos);
         offset.position = new Vector3(Mathf.Clamp(xPos, -76.4f, 76.4f), yPos, Mathf.Clamp(zPos, -76.4f, 76.4f));
 	}
 }
