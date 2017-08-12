@@ -21,11 +21,10 @@ public class NpcController : MonoBehaviour {
 	void Start ()
     {
         points = pointGroup.GetComponentsInChildren<Transform>();
-        foreach(Transform transform in points)
-        {
-            transform.position = new Vector3(transform.position.x + Random.Range(-3, 3), transform.position.y, transform.position.z + Random.Range(-3, 3));
-        }
+        transform.position = points[Random.Range(0, points.Length)].position;
+        transform.position = new Vector3(transform.position.x, 2f, transform.position.z);
         ai = GetComponent<NavMeshAgent>();
+        ai.enabled = true;
 	}
 	
 	void Update ()
@@ -49,7 +48,7 @@ public class NpcController : MonoBehaviour {
 
         if(player != null && !talkingWithPlayer)
         {
-            Debug.Log("destroy");
+            Destroy(gameObject);
         }
 	}
 
@@ -61,12 +60,18 @@ public class NpcController : MonoBehaviour {
             {
                 newBubble = Instantiate(speechBubble);
                 newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+                newBubble.gameObject.SetActive(false);
+
+                newBubble.gameObject.SetActive(true);
             }
             else
             {
                 Destroy(newBubble.gameObject);
                 newBubble = Instantiate(speechBubble);
                 newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+                newBubble.gameObject.SetActive(false);
+
+                newBubble.gameObject.SetActive(true);
             }
             newBubble.Talk();
         }
