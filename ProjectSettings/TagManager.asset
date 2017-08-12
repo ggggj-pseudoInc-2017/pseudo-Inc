@@ -10,6 +10,8 @@ TagManager:
   - cup
   - bible
   - pot
+  - Church
+  - InsidePoint
   layers:
   - Default
   - TransparentFX
