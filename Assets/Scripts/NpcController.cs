@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using pseudoinc;
 
 public class NpcController : MonoBehaviour {
 
@@ -10,9 +11,12 @@ public class NpcController : MonoBehaviour {
     public GameObject pointGroup;
     public Transform player;
 
+    NonFollower nonFollower;
+
     public bool talkingWithPlayer = false;
 
     int destPoint = 0;
+    int numOfClicks = 0;
     NavMeshAgent ai;
 
     public SpeechBubble speechBubble;
@@ -20,12 +24,12 @@ public class NpcController : MonoBehaviour {
 
 	void Start ()
     {
+        nonFollower = new NonFollower(Random.Range(Church.Get_favor() - 10, Church.Get_favor() + 11), Random.Range(1, 11));
         points = pointGroup.GetComponentsInChildren<Transform>();
-        foreach(Transform transform in points)
-        {
-            transform.position = new Vector3(transform.position.x + Random.Range(-3, 3), transform.position.y, transform.position.z + Random.Range(-3, 3));
-        }
+        transform.position = points[Random.Range(0, points.Length)].position;
+        transform.position = new Vector3(transform.position.x, 2f, transform.position.z);
         ai = GetComponent<NavMeshAgent>();
+        ai.enabled = true;
 	}
 	
 	void Update ()
@@ -49,27 +53,67 @@ public class NpcController : MonoBehaviour {
 
         if(player != null && !talkingWithPlayer)
         {
-            Debug.Log("destroy");
+            Destroy(gameObject);
         }
 	}
 
     public void MoreClicked()
     {
-        if (talkingWithPlayer)
+        if (talkingWithPlayer && numOfClicks < 5)
         {
             if (newBubble == null)
             {
                 newBubble = Instantiate(speechBubble);
                 newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+                newBubble.gameObject.SetActive(false);
+
+                newBubble.gameObject.SetActive(true);
+                nonFollower.Add_favor(4);
+                numOfClicks++;
             }
             else
             {
                 Destroy(newBubble.gameObject);
                 newBubble = Instantiate(speechBubble);
                 newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+                newBubble.gameObject.SetActive(false);
+
+                newBubble.gameObject.SetActive(true);
+                nonFollower.Add_favor(4);
+                numOfClicks++;
+            }
+            if(nonFollower.Get_favor() >= 70)
+            {
+                BecomeFollower(nonFollower);
+                return;
+            }
+            if(numOfClicks == 5)
+            {
+                RemainNonFollower();
             }
             newBubble.Talk();
         }
+    }
+
+    void BecomeFollower(NonFollower nonfollower)
+    {
+        Follower Follower = new Follower(nonfollower.Get_income(), Random.Range(40, 81));
+        Debug.Log("offer : " + Follower.Get_offer() + "   faith : " + Follower.Get_faith());
+        Church.Add_follower(Follower);
+        Debug.Log("followers : " + Church.Get_num_followers());
+        StartCoroutine(DestoryPerson());
+    }
+
+    void RemainNonFollower()
+    {
+        StartCoroutine(DestoryPerson());
+    }
+
+    IEnumerator DestoryPerson()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(newBubble.gameObject);
+        Destroy(this.gameObject);
     }
 
     void GoNextPoint()
@@ -82,10 +126,5 @@ public class NpcController : MonoBehaviour {
         ai.destination = points[destPoint].position;
 
         destPoint = (Random.Range(0, points.Length)) % points.Length;
-    }
-
-    private void OnDestroy()
-    {
-        Destroy(newBubble);
     }
 }

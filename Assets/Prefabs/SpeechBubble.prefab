@@ -247,7 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bdcbfb59d224a87bfd3ba0e792b112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refuse: []
+  refuse:
+  - asdf
   neutral: []
   accept: []
   placeHolderTrans: {fileID: 4226762144154614}
