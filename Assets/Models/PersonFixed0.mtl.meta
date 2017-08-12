@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/PersonFixed0.mtl.meta
+guid: 5b129a5506595e7419c55322299d55ae
+timeCreated: 1502569552
+=======
 guid: ee354005261f718418855d44947d0291
 timeCreated: 1502570495
+>>>>>>> ca235fa18a9d95d13fe5bbb24c0e43ed5e013234:Assets/Models/PersonFixed0.mtl.meta
 licenseType: Free
 DefaultImporter:
   userData: 

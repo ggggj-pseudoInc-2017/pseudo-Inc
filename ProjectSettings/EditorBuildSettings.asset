@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 16f58a64f6a2e174cbb65b790a89cb34
+  - enabled: 1
+    path: Assets/Outdoor.unity
+    guid: f0af3e5fd34624037b4f743d06e4f89b
+  - enabled: 1
+    path: Assets/Scenes/YeBaeRoom.unity
+    guid: ef2ee87a0a4fe5a478063bf8f3ffa326
