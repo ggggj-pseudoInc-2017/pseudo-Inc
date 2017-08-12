@@ -8,6 +8,9 @@ public class NpcController : MonoBehaviour {
 
     public Transform[] points;
     public GameObject pointGroup;
+    public Transform player;
+
+    public bool talkingWithPlayer = false;
 
     int destPoint = 0;
     NavMeshAgent ai;
@@ -24,9 +27,26 @@ public class NpcController : MonoBehaviour {
 	
 	void Update ()
     {
-		if(!ai.pathPending && ai.remainingDistance < 1f)
+        if(player != null && (player.position - transform.position).magnitude <= 5f)
+        {
+            talkingWithPlayer = true;
+        }
+        else
+        {
+            talkingWithPlayer = false;
+        }
+		if(!ai.pathPending && ai.remainingDistance < 1f && !talkingWithPlayer)
         {
             GoNextPoint();
+        }
+        else if(talkingWithPlayer)
+        {
+            ai.destination = transform.position;
+        }
+
+        if(player != null && !talkingWithPlayer)
+        {
+            Debug.Log("destroy");
         }
 	}
 

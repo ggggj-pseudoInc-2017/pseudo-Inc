@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject player;
 
     bool isMovingToNpc;
+    GameObject targetNPC;
 
     void Start ()
     {
@@ -28,11 +29,11 @@ public class PlayerController : MonoBehaviour {
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
             {
                 if(hit.transform.tag == "npc" && (hit.transform.position - this.transform.position).magnitude > 2f)
                 {
-                    ai.destination = hit.point;
+                    targetNPC = hit.transform.gameObject;
                     isMovingToNpc = true;
                 }
                 else if(hit.transform.tag == "npc" && (hit.transform.position - this.transform.position).magnitude <= 2f)
@@ -47,9 +48,19 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-        if (isMovingToNpc && (ai.destination - transform.position).magnitude <= 2f)
+        if(isMovingToNpc && (targetNPC.transform.position - transform.position).magnitude > 5f)
+        {
+            ai.destination = targetNPC.transform.position;
+            targetNPC.GetComponent<NpcController>().talkingWithPlayer = false;
+        }
+        else if (isMovingToNpc && (targetNPC.transform.position - transform.position).magnitude <= 5f)
         {
             ai.destination = transform.position;
+            isMovingToNpc = false;
+            targetNPC.GetComponent<NpcController>().talkingWithPlayer = true;
+            targetNPC.GetComponent<NpcController>().player = transform;
+            targetNPC.transform.LookAt(this.transform);
+            transform.LookAt(targetNPC.transform);
         }
         if(ai.velocity.magnitude > 0 )
         {
