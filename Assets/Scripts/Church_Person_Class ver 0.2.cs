@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine;
 using System.Linq;
 using System.Text;
 
@@ -171,26 +172,4 @@ namespace pseudoinc
         }
     }
 
-
-    class Upgrade
-    {
-        private const int money_increse = 50;
-        private const int follower_increse = 5;
-        private const int faith_increse = 20;
-        private const int favor_increse = 10;
-
-        private void Upgrade_gospel(int money, int num_follower, int offer, int faith, int favor)
-        {
-            Church.Add_money(money);
-            for(int i=0; i<num_follower; i++)
-            {
-                Church.Add_follower(new Follower());
-            }
-            Church.Increase_all_followers_offer(offer);
-            Church.Increase_all_followers_faith(faith);
-            Church.Add_favor(favor);
-        }
-
-
-    }
 }
