@@ -110,15 +110,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565578384839638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
+  m_LocalRotation: {x: -0.31598538, y: 0.3596048, z: 0.13088542, w: 0.8681629}
+  m_LocalPosition: {x: 0, y: 19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4684374078992822}
   - {fileID: 4226762144154614}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -40, y: 45, z: 0}
 --- !u!4 &4684374078992822
 Transform:
   m_ObjectHideFlags: 1
@@ -222,7 +222,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1258283673984596}
-  m_Text: "\uD14C\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0"
+  m_Text: test
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bdcbfb59d224a87bfd3ba0e792b112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToShow: "\uAD50\uD68C \uC548 \uB2E4\uB140\uC694"
+  refuse: []
+  neutral: []
+  accept: []
   placeHolderTrans: {fileID: 4226762144154614}
   textMesh: {fileID: 102165971228523474}

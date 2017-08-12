@@ -34,12 +34,13 @@ public class PlayerController : MonoBehaviour {
                 if(hit.transform.tag == "npc" && (hit.transform.position - this.transform.position).magnitude > 2f)
                 {
                     targetNPC = hit.transform.gameObject;
+                    targetNPC.GetComponent<NpcController>().MoreClicked();
                     isMovingToNpc = true;
                 }
                 else if(hit.transform.tag == "npc" && (hit.transform.position - this.transform.position).magnitude <= 2f)
                 {
-                    Debug.Log("npc");
                     isMovingToNpc = false;
+                    targetNPC.GetComponent<NpcController>().MoreClicked();
                 }
                 else
                 {

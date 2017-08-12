@@ -5,12 +5,17 @@ using UnityEngine;
 public class SpeechBubble : MonoBehaviour {
 
 	[SerializeField]
-	string textToShow;
+	string[] refuse;
+    [SerializeField]
+    string[] neutral;
+    [SerializeField]
+    string[] accept;
 	[SerializeField]
 	Transform placeHolderTrans;
 	[SerializeField]
 	TextMesh textMesh;
 
+    string textToShow;
 
 	float baseLength = 4;
 	float lengthPerCharacter = 5f;
@@ -34,6 +39,11 @@ public class SpeechBubble : MonoBehaviour {
 
 		yield break;
 	}
+
+    public void Talk()
+    {
+        Debug.Log("talk");
+    }
 
 	void OnEnable() {
 		StartCoroutine(Show());

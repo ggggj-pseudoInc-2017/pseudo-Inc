@@ -15,6 +15,9 @@ public class NpcController : MonoBehaviour {
     int destPoint = 0;
     NavMeshAgent ai;
 
+    public SpeechBubble speechBubble;
+    SpeechBubble newBubble;
+
 	void Start ()
     {
         points = pointGroup.GetComponentsInChildren<Transform>();
@@ -50,6 +53,25 @@ public class NpcController : MonoBehaviour {
         }
 	}
 
+    public void MoreClicked()
+    {
+        if (talkingWithPlayer)
+        {
+            if (newBubble == null)
+            {
+                newBubble = Instantiate(speechBubble);
+                newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+            }
+            else
+            {
+                Destroy(newBubble.gameObject);
+                newBubble = Instantiate(speechBubble);
+                newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+            }
+            newBubble.Talk();
+        }
+    }
+
     void GoNextPoint()
     {
         if(points.Length == 0)
@@ -60,5 +82,10 @@ public class NpcController : MonoBehaviour {
         ai.destination = points[destPoint].position;
 
         destPoint = (Random.Range(0, points.Length)) % points.Length;
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(newBubble);
     }
 }
