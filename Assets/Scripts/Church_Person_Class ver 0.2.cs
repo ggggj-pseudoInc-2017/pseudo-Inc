@@ -30,9 +30,13 @@ namespace pseudoinc
         {
             followers.Add(follower);
             num_followers++;
+            Apply_faith();
+            Calculate_offer();
         }
         
-        public static int Get_faith() { return faith; }
+        public static int Get_faith()
+        {
+            return faith; }
         public static void Apply_faith()  // 신도들에게서 들어올 신앙 계산 및 적용
         {
             int cal_faith = 0;
@@ -68,6 +72,7 @@ namespace pseudoinc
                 }
                 ((Follower)followers[i]).Add_faith(faith);
             }
+            Apply_faith();
         }
         public static void Increase_all_followers_offer(int offer) // 모든 신도들의 헌금량 증가
         {
@@ -79,6 +84,7 @@ namespace pseudoinc
                 }
                 ((Follower)followers[i]).Add_offer(offer);
             }
+            Calculate_offer();
         }
     }
 
@@ -126,6 +132,7 @@ namespace pseudoinc
 
         public int Get_favor() { return favor; }
         public void Set_favor(int favor) { this.favor = favor; }
+        public void Add_favor(int favor) { this.favor += favor; }
         public int Get_income() { return income; }
         public void Set_income(int income) { this.income = income; }
 
