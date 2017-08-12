@@ -6,35 +6,34 @@ using System.Text;
 
 namespace pseudoinc
 {
-    //테스트로 사용한 클래스. 완성되면 삭제 요망
-    public static class Global
-    {
-        public static Church church_test;    //테스트용
-        public static int favor_test; //테스트용
-    }
-
     // 교회 클래스 생성
-    class Church
+    public static class Church
     {
         // 변수들 private으로 선언
-        private int money;          // 자금
-        private ArrayList followers;// 신도들의 배열 리스트
-        private int num_followers;  // 총 신도 수
-        private int faith;          // 신도들의 충성도 합
+        private static int money = 0;           // 자금
+        private static ArrayList followers = {};// 신도들의 배열 리스트
+        private static int num_followers = 0;   // 총 신도 수
+        private static int faith = 0;           // 신도들의 충성도 합
+        private static int favor = 50;          // 비신도들에 대한 호감도
 
         // 변수들에 대한 접근 메서드를 public으로 선언
-        public int Get_money()          { return money; }
-        public void Set_money(int money){ this.money = money; }
-        public void Add_money(int money){ this.money += money; }
-        public int Get_num_followers() { return num_followers; }
-
-        public void Add_follower(Follower follower)
+        public static int Get_money()          { return money; }
+        public static void Set_money(int money){ this.money = money; }
+        public static void Add_money(int money){ this.money += money; }
+        
+        public static int Get_favor()          { return favor; }
+        public static void Set_favor(int favor){ this.favor = favor; }
+        public static void Add_favor(int favor){ this.favor += favor; }
+        
+        public static int Get_num_followers() { return num_followers; }
+        public static void Add_follower(Follower follower)
         {
             followers.Add(follower);
             num_followers++;
         }
-        public int Get_faith() { return faith; }
-        public void Apply_faith()
+        
+        public static int Get_faith() { return faith; }
+        public static void Apply_faith()  // 신도들에게서 들어올 신앙 계산 및 적용
         {
             int cal_faith = 0;
             for (int i = 0; i < num_followers; i++){
@@ -44,8 +43,8 @@ namespace pseudoinc
                 cal_faith += ((Follower)followers[i]).Get_faith();
             }
             faith = cal_faith;
-        }   // 신도들에게서 들어올 신앙 계산 및 적용
-        public int Calculate_offer()
+        }  
+        public static int Calculate_offer() // 신도들에게서 들어올 헌금(십일조) 계산
         {
             int cal_money = 0;
             for (int i = 0; i < num_followers; i++)
@@ -57,9 +56,9 @@ namespace pseudoinc
                 cal_money += ((Follower)followers[i]).Get_offer();
             }
             return cal_money;
-        } // 신도들에게서 들어올 돈 계산
+        } 
         
-        public void Increase_all_followers_faith(int faith)
+        public static void Increase_all_followers_faith(int faith) // 모든 신도들의 신앙심 증가
         {
             for (int i = 0; i < num_followers; i++)
             {
@@ -70,7 +69,7 @@ namespace pseudoinc
                 ((Follower)followers[i]).Add_faith(faith);
             }
         }
-        public void Increase_all_followers_offer(int offer)
+        public static void Increase_all_followers_offer(int offer) // 모든 신도들의 헌금량 증가
         {
             for (int i = 0; i < num_followers; i++)
             {
@@ -80,26 +79,6 @@ namespace pseudoinc
                 }
                 ((Follower)followers[i]).Add_offer(offer);
             }
-        }
-
-        // 생성자 선언
-        public Church()
-        {
-            Set_money(0);
-            followers = new ArrayList();
-            num_followers = 0;
-        }
-        public Church(int money)
-        {
-            Set_money(money);
-            followers = new ArrayList();
-            num_followers = 0;
-        }
-        public Church(int money, ArrayList followers, int num_followers)
-        {
-            Set_money(money);
-            this.followers = followers;
-            this.num_followers = num_followers;
         }
     }
 
@@ -156,16 +135,16 @@ namespace pseudoinc
         private const int faith_increse = 20;
         private const int favor_increse = 10;
 
-        private void gospel(int money, int num_follower, int offer, int faith, int favor)
+        private void Upgrade_gospel(int money, int num_follower, int offer, int faith, int favor)
         {
-            Global.church_test.Add_money(money);
+            Church.Add_money(money);
             for(int i=0; i<num_follower; i++)
             {
-                Global.church_test.Add_follower(new Follower());
+                Church.Add_follower(new Follower());
             }
-            Global.church_test.Increase_all_followers_offer(offer);
-            Global.church_test.Increase_all_followers_faith(faith);
-            Global.favor_test += favor;
+            Church.Increase_all_followers_offer(offer);
+            Church.Increase_all_followers_faith(faith);
+            Church.Add_favor(favor);
         }
 
 
