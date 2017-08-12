@@ -5,8 +5,7 @@ using UnityEngine;
 public class SpawnNewNonFollowers : MonoBehaviour {
 
     public GameObject[] persons;
-
-    public Transform[][] points;
+    
     public GameObject[] pointGroups;
 
     public float spwanTime = 10f;
@@ -21,14 +20,8 @@ public class SpawnNewNonFollowers : MonoBehaviour {
         Spawn();
         Spawn();
         Spawn();
-        Spawn();
-        Spawn();
         StartCoroutine(SpawnRoutine());
     }
-
-	void Update () {
-		
-	}
 
     IEnumerator SpawnRoutine()
     {
@@ -41,6 +34,7 @@ public class SpawnNewNonFollowers : MonoBehaviour {
 
     void Spawn()
     {
-
+        GameObject newPerson = Instantiate(persons[Random.Range(0, persons.Length)]);
+        newPerson.GetComponent<NpcController>().pointGroup = pointGroups[Random.Range(0, pointGroups.Length)];
     }
 }

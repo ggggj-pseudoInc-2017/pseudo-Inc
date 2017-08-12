@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - npc
+  - roomobj
+  - crab
+  - cup
+  - bible
+  - pot
   layers:
   - Default
   - TransparentFX

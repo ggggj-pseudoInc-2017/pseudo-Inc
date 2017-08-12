@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 804973b5bf1b9a54083f89bcdede735b
+timeCreated: 1502541693
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HYGothic-Extra
+  fontNames:
+  - HYGothic-Extra
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
