@@ -53,7 +53,7 @@ public class NpcController : MonoBehaviour {
 
         if(player != null && !talkingWithPlayer)
         {
-            Destroy(gameObject);
+            StartCoroutine(DestoryPerson());
         }
 	}
 
