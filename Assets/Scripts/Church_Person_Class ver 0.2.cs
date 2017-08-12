@@ -10,13 +10,18 @@ namespace pseudoinc
     static class Church
     {
         // 변수들 private으로 선언
+        private static int level = 0;           // 교회레벨
         private static int money = 0;           // 자금
         private static ArrayList followers = new ArrayList();// 신도들의 배열 리스트
         private static int num_followers = 0;   // 총 신도 수
         private static int faith = 0;           // 신도들의 충성도 합
         private static int favor = 45;          // 비신도들에 대한 호감도
 
+
         // 변수들에 대한 접근 메서드를 public으로 선언
+        public static int Get_level() { return Math.Min(level,4); }
+        public static void LevelUp() { level++; }
+
         public static int Get_money()          { return money; }
         public static void Set_money(int money_){ money = money_; }
         public static void Add_money(int money_){ money += money_; }
@@ -32,6 +37,25 @@ namespace pseudoinc
             num_followers++;
             Apply_faith();
             Calculate_offer();
+        }
+
+        public static int Get_maxFollower()
+        {
+            switch(Get_level())
+            {
+                case 0:
+                    return 4;
+                case 1:
+                    return 16;
+                case 2:
+                    return 36;
+                case 3:
+                    return 64;
+                case 4:
+                    return 121;
+                default:
+                    return 0;
+            }
         }
         
         public static int Get_faith()

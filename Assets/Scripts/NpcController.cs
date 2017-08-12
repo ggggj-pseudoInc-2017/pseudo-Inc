@@ -99,9 +99,19 @@ public class NpcController : MonoBehaviour {
 
     void BecomeFollower(NonFollower nonfollower)
     {
-        Follower Follower = new Follower(nonfollower.Get_income(), Random.Range(40, 81));
-        Debug.Log("offer : " + Follower.Get_offer() + "   faith : " + Follower.Get_faith());
-        Church.Add_follower(Follower);
+        if (Church.Get_num_followers() >= Church.Get_maxFollower())
+        {
+            Destroy(newBubble.gameObject);
+            newBubble = Instantiate(speechBubble);
+            newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
+            newBubble.ItsFull();
+        }
+        else
+        {
+            Follower Follower = new Follower(nonfollower.Get_income(), Random.Range(40, 81));
+            Debug.Log("offer : " + Follower.Get_offer() + "   faith : " + Follower.Get_faith());
+            Church.Add_follower(Follower);
+        }
         Debug.Log("followers : " + Church.Get_num_followers());
         StartCoroutine(DestoryPerson());
     }

@@ -50,9 +50,14 @@ public class SpeechBubble : MonoBehaviour {
 
 		yield break;
 	}
-    private void Start()
-    {       
-        
+    public void ItsFull()
+    {
+        textMesh.text = "교회가 너무 좁네요!";
+        textTarget = 1f;
+        target = textMesh.text.Length * 6;
+        textMesh.transform.localScale = new Vector3(0f, textMesh.transform.localScale.y, textMesh.transform.localScale.z);
+        placeHolderTrans.localScale = new Vector3(0f, placeHolderTrans.localScale.y, placeHolderTrans.localScale.z);
+        isInitialized = true;
     }
     private void Update()
     {
