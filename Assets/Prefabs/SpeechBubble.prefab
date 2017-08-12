@@ -222,7 +222,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1258283673984596}
-  m_Text: test
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -248,8 +248,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refuse:
-  - asdf
-  neutral: []
-  accept: []
+  - "\uAD00\uC2EC \uC5C6\uC2B5\uB2C8\uB2E4."
+  - "\uBC14\uC05C \uC57D\uC18D\uC774 \uC788\uC5B4\uC11C\uC694."
+  - "\uC65C\uC694?"
+  - "\uC544\uB1E8."
+  - "\uC0B4\uB824\uC8FC\uC138\uC694!"
+  - ???????
+  - "\uC2A4\uB9C8\uD2B8\uD3F0 \uC5C6\uC73C\uC138\uC694?"
+  - "\uB0B4\uAC00 \uBC14\uB85C \uC2E0\uC138\uACC4\uC758 \uC2E0\uC774\uB2E4!"
+  - "FSM\uC744 \uC544\uC2DC\uB098\uC694?"
+  neutral:
+  - "\uC544 \uC81C \uC778\uC0C1\uC774 \uC120\uD574\uBCF4\uC774\uB098\uC694? \uD558\uD558"
+  - "\uC544 \uB124 \uC548\uB155\uD558\uC138\uC694?"
+  - "\uB9E5\uB3C4\uB0A0\uB4DC\uB294 \uC800 \uCABD\uC73C\uB85C \uCB49 \uAC00\uC2DC\uBA74
+    \uC788\uC2B5\uB2C8\uB2E4."
+  - "\uB124 \uC800\uCABD\uC5D0 \uC788\uB294 \uAC74\uBB3C\uC774 \uAD50\uBCF4\uBB38\uACE0\uC785\uB2C8\uB2E4."
+  accept:
+  - "\uBBD3\uC2DC\uC5D8!"
+  - "\uD55C\uBC88 \uAC19\uC774 \uAC00\uBCF4\uC8E0."
+  - "\uCE74\uD398\uC5D0\uC11C \uCEE4\uD53C \uD55C \uC794 \uD574\uC694."
+  - "\uC88B\uC740 \uC77C\uC744 \uD558\uC2DC\uB294 \uBD84\uC774\uAD70\uC694!"
   placeHolderTrans: {fileID: 4226762144154614}
   textMesh: {fileID: 102165971228523474}
+  target: 10
+  smoothTime: 0.3
+  smoothTime2: 0.3

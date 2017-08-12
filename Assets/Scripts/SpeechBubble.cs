@@ -30,8 +30,9 @@ public class SpeechBubble : MonoBehaviour {
 	float baseLength = 4;
 	float lengthPerCharacter = 5f;
 
+    bool isInitialized = false;
+
 	IEnumerator Show() {
-		textMesh.text = "테스트 메세지";
 		if (string.IsNullOrEmpty(textToShow))
 			yield break;
 		var timer = 0f;
@@ -50,21 +51,41 @@ public class SpeechBubble : MonoBehaviour {
 		yield break;
 	}
     private void Start()
-    {
-        textMesh.text = "테스트 메세지";
-        textTarget = 1f;
-        target = textMesh.text.Length * 6;
-        textMesh.transform.localScale = new Vector3(0f, textMesh.transform.localScale.y, textMesh.transform.localScale.z);
-        placeHolderTrans.localScale = new Vector3 (0f, placeHolderTrans.localScale.y, placeHolderTrans.localScale.z);
+    {       
+        
     }
     private void Update()
     {
-        float newSize = Mathf.SmoothDamp(zSize, target, ref yVelocity, smoothTime);
-        float newTextSize = Mathf.SmoothDamp(textSize, textTarget, ref yVelocity2, smoothTime2);
-        zSize = newSize;
-        textSize = newTextSize;
-        placeHolderTrans.localScale = new Vector3(zSize, placeHolderTrans.localScale.y, placeHolderTrans.localScale.z);
-        textMesh.transform.localScale = new Vector3(textSize, textMesh.transform.localScale.y, textMesh.transform.localScale.z);
+        if (isInitialized)
+        {
+            float newSize = Mathf.SmoothDamp(zSize, target, ref yVelocity, smoothTime);
+            float newTextSize = Mathf.SmoothDamp(textSize, textTarget, ref yVelocity2, smoothTime2);
+            zSize = newSize;
+            textSize = newTextSize;
+            placeHolderTrans.localScale = new Vector3(zSize, placeHolderTrans.localScale.y, placeHolderTrans.localScale.z);
+            textMesh.transform.localScale = new Vector3(textSize, textMesh.transform.localScale.y, textMesh.transform.localScale.z);
+        }
+    }
+
+    public void WriteText(int favor)
+    {
+        if (favor < 60)
+        {
+            textMesh.text = refuse[Random.Range(0, refuse.Length)];
+        }
+        else if (favor >= 60 && favor < 70)
+        {
+            textMesh.text = neutral[Random.Range(0, neutral.Length)];
+        }
+        else if (favor >= 70)
+        {
+            textMesh.text = accept[Random.Range(0, accept.Length)];
+        }
+        textTarget = 1f;
+        target = textMesh.text.Length * 6;
+        textMesh.transform.localScale = new Vector3(0f, textMesh.transform.localScale.y, textMesh.transform.localScale.z);
+        placeHolderTrans.localScale = new Vector3(0f, placeHolderTrans.localScale.y, placeHolderTrans.localScale.z);
+        isInitialized = true;
     }
 
     public void Talk()

@@ -63,23 +63,25 @@ public class NpcController : MonoBehaviour {
         {
             if (newBubble == null)
             {
+                nonFollower.Add_favor(4);
                 newBubble = Instantiate(speechBubble);
                 newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
                 newBubble.gameObject.SetActive(false);
 
                 newBubble.gameObject.SetActive(true);
-                nonFollower.Add_favor(4);
+                newBubble.WriteText(nonFollower.Get_favor());
                 numOfClicks++;
             }
             else
             {
+                nonFollower.Add_favor(4);
                 Destroy(newBubble.gameObject);
                 newBubble = Instantiate(speechBubble);
                 newBubble.transform.position = transform.position + new Vector3(0, 20, 0);
                 newBubble.gameObject.SetActive(false);
 
                 newBubble.gameObject.SetActive(true);
-                nonFollower.Add_favor(4);
+                newBubble.WriteText(nonFollower.Get_favor());
                 numOfClicks++;
             }
             if(nonFollower.Get_favor() >= 70)
@@ -90,8 +92,8 @@ public class NpcController : MonoBehaviour {
             if(numOfClicks == 5)
             {
                 RemainNonFollower();
+                return;
             }
-            newBubble.Talk();
         }
     }
 
