@@ -7,13 +7,16 @@ public class UIController : MonoBehaviour {
     public GameObject[] Panels;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        Move();
+	void Update ()
+    {
+        if (!(Panels[0].activeSelf || Panels[1].activeSelf || Panels[2].activeSelf || Panels[3].activeSelf)){
+            Move();
+        }
     }
 
     void Move()
@@ -22,34 +25,24 @@ public class UIController : MonoBehaviour {
         {
             //RaycastHit hit;
             Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit[] hits;
+            //RaycastHit[] hits;
 
             RaycastHit hit;
             Physics.Raycast(r, out hit);
 
+            if(Panels[0].activeSelf || Panels[1].activeSelf || Panels[2].activeSelf || Panels[3].activeSelf)
+            { }
             if (hit.transform != null){
                 if (hit.transform.tag == "crab"){
                     Panels[0].SetActive(true);
-                    Panels[1].SetActive(false);
-                    Panels[2].SetActive(false);
-                    Panels[3].SetActive(false);
                 }
                 else if (hit.transform.tag == "cup"){
-                    Panels[0].SetActive(false);
                     Panels[1].SetActive(true);
-                    Panels[2].SetActive(false);
-                    Panels[3].SetActive(false);
                 }
                 else if (hit.transform.tag == "pot"){
-                    Panels[0].SetActive(false);
-                    Panels[1].SetActive(false);
                     Panels[2].SetActive(true);
-                    Panels[3].SetActive(false);
                 }
                 else if (hit.transform.tag == "bible"){
-                    Panels[0].SetActive(false);
-                    Panels[1].SetActive(false);
-                    Panels[2].SetActive(false);
                     Panels[3].SetActive(true);
                 }
             }
