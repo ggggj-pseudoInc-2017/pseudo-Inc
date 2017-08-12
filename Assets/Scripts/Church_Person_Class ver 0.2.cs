@@ -7,23 +7,23 @@ using System.Text;
 namespace pseudoinc
 {
     // 교회 클래스 생성
-    public static class Church
+    static class Church
     {
         // 변수들 private으로 선언
         private static int money = 0;           // 자금
-        private static ArrayList followers = {};// 신도들의 배열 리스트
+        private static ArrayList followers = new ArrayList();// 신도들의 배열 리스트
         private static int num_followers = 0;   // 총 신도 수
         private static int faith = 0;           // 신도들의 충성도 합
-        private static int favor = 50;          // 비신도들에 대한 호감도
+        private static int favor = 45;          // 비신도들에 대한 호감도
 
         // 변수들에 대한 접근 메서드를 public으로 선언
         public static int Get_money()          { return money; }
-        public static void Set_money(int money){ this.money = money; }
-        public static void Add_money(int money){ this.money += money; }
+        public static void Set_money(int money_){ money = money_; }
+        public static void Add_money(int money_){ money += money_; }
         
         public static int Get_favor()          { return favor; }
-        public static void Set_favor(int favor){ this.favor = favor; }
-        public static void Add_favor(int favor){ this.favor += favor; }
+        public static void Set_favor(int favor_){ favor = favor_; }
+        public static void Add_favor(int favor_){ favor += favor_; }
         
         public static int Get_num_followers() { return num_followers; }
         public static void Add_follower(Follower follower)
@@ -122,9 +122,18 @@ namespace pseudoinc
     {
         // 변수들 private으로 선언
         private int favor;	// 종교에 가지는 호감도
+        private int income;
 
         public int Get_favor() { return favor; }
         public void Set_favor(int favor) { this.favor = favor; }
+        public int Get_income() { return income; }
+        public void Set_income(int income) { this.income = income; }
+
+        public NonFollower(int favor, int income)
+        {
+            Set_favor(favor);
+            Set_income(income);
+        }
     }
 
 

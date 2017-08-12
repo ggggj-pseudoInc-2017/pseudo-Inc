@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using pseudoinc;
 
 public class NpcController : MonoBehaviour {
 
     public Transform[] points;
     public GameObject pointGroup;
     public Transform player;
+
+    NonFollower nonFollower = new NonFollower(Random.Range(Church.Get_favor()-10,Church.Get_favor()+11), Random.Range(1,11));
 
     public bool talkingWithPlayer = false;
 
