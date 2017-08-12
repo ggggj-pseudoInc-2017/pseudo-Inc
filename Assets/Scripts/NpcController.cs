@@ -124,7 +124,10 @@ public class NpcController : MonoBehaviour {
     IEnumerator DestoryPerson()
     {
         yield return new WaitForSeconds(2);
-        Destroy(newBubble.gameObject);
+        if (newBubble != null)
+        {
+            Destroy(newBubble.gameObject);
+        }
         Destroy(this.gameObject);
     }
 

@@ -16,6 +16,7 @@ namespace pseudoinc
         private static int num_followers = 0;   // 총 신도 수
         private static int faith = 0;           // 신도들의 충성도 합
         private static int favor = 45;          // 비신도들에 대한 호감도
+        private static float time = 0f;
 
 
         // 변수들에 대한 접근 메서드를 public으로 선언
@@ -29,6 +30,9 @@ namespace pseudoinc
         public static int Get_favor()          { return favor; }
         public static void Set_favor(int favor_){ favor = favor_; }
         public static void Add_favor(int favor_){ favor += favor_; }
+
+        public static float GetTime() { return time; }
+        public static void SetTIme(float value) { time = value; }
         
         public static int Get_num_followers() { return num_followers; }
         public static void Add_follower(Follower follower)
