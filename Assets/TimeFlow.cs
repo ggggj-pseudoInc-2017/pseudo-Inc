@@ -31,6 +31,15 @@ public class TimeFlow : MonoBehaviour {
         time += Time.deltaTime;
         Church.SetTIme(time);
 
+        if(Input.GetKey("right"))
+        {
+            time += 10;
+        }
+        if(Input.GetKey("left"))
+        {
+            Church.Add_money(10);
+        }
+
         timeText.text = "시간 : " + Mathf.RoundToInt(time);
 
         if(time/30f > NumGetMoney+1)
@@ -66,7 +75,10 @@ public class TimeFlow : MonoBehaviour {
                     return;
                 case 5:
                     Church.Add_money(-2000);
-                    Win();
+                    if(Church.Get_money() >= 0)
+                    {
+                        Win();
+                    }
                     return;
                 default:
                     return;
