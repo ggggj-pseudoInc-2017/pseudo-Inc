@@ -21,42 +21,53 @@ public class InsideSceneManager : MonoBehaviour {
     public GameObject level3;
     public GameObject level4;
 
+    public AudioClip[] audios;
+
+    AudioSource aud;
+
     Transform[] Posintions;
 
     void Start ()
     {
+        aud = GetComponent<AudioSource>();
 		switch(Church.Get_level())
         {
             case 0:
                 level0.SetActive(true);
                 Posintions = level0Pos.GetComponentsInChildren<Transform>();
                 SetPeople();
+                aud.clip = audios[0];
+                aud.Play();
                 return;
             case 1:
                 level1.SetActive(true);
                 Posintions = level1Pos.GetComponentsInChildren<Transform>();
                 SetPeople();
+                aud.clip = audios[1];
+                aud.Play();
                 return;
             case 2:
                 level2.SetActive(true);
                 Posintions = level2Pos.GetComponentsInChildren<Transform>();
                 SetPeople();
+                aud.clip = audios[1];
+                aud.Play();
                 return;
             case 3:
                 level3.SetActive(true);
                 Posintions = level3Pos.GetComponentsInChildren<Transform>();
                 SetPeople();
+                aud.clip = audios[1];
+                aud.Play();
                 return;
             case 4:
                 level4.SetActive(true);
                 Posintions = level4Pos.GetComponentsInChildren<Transform>();
                 SetPeople();
+                aud.clip = audios[2];
+                aud.Play();
                 return;
         }
-	}
-	
-	void Update () {
-		
 	}
 
     void SetPeople()
@@ -75,6 +86,7 @@ public class InsideSceneManager : MonoBehaviour {
         for(int i = 0; i < Church.Get_num_followers();i++)
         {
             GameObject newPerson = Instantiate(Persons[Random.Range(0, Persons.Length)]);
+            newPerson.transform.eulerAngles = new Vector3(0, 180, 0);
             newPerson.transform.position = positions[i].position;
         }
     }

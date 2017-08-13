@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using pseudoinc;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeFlow : MonoBehaviour {
 
@@ -20,9 +21,9 @@ public class TimeFlow : MonoBehaviour {
     void Start () {
 
         time = Church.GetTime();
-        moneySlider.value = 0;
-        moneySlider.maxValue = 50;
-        moneyToSend.text = "0 / 50";
+        moneySlider.value = Church.Get_money();
+        moneySlider.maxValue = Church.MoneyToSend;
+        moneyToSend.text = Church.Get_money() + " / " + Church.MoneyToSend;
     }
 	
 	void Update ()
@@ -104,11 +105,11 @@ public class TimeFlow : MonoBehaviour {
 
     void Win()
     {
-        Debug.Log("win!");
+        SceneManager.LoadScene(4);
     }
 
     void BadEnd()
     {
-        Debug.Log("badEnd!");
+        SceneManager.LoadScene(5);
     }
 }

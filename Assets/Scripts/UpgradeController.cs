@@ -51,6 +51,10 @@ public class UpgradeController : MonoBehaviour {
 
     private void Upgrade_gospel(int money, int num_follower, int offer, int faith, int favor) // 교리 업그레이드(성서)
     {
+        if(money + Church.Get_money()<0)
+        {
+            return;
+        }
         Church.Add_money(money);
         for (int i = 0; i < num_follower; i++)
         {

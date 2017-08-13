@@ -21,6 +21,50 @@ namespace pseudoinc
 
 
         // 변수들에 대한 접근 메서드를 public으로 선언
+        public static int MoneyToSend
+        {
+            get
+            {
+                switch(Mathf.FloorToInt(time / 180))
+                {
+                    case 0:
+                        return 50;
+                    case 1:
+                        return 250;
+                    case 2:
+                        return 500;
+                    case 3:
+                        return 1000;
+                    case 4:
+                        return 2000;
+                    default:
+                        return 0;
+                }
+            }
+        }
+
+        public static int MoneyToBuild
+        {
+            get
+            {
+                switch (level)
+                {
+                    case 0:
+                        return 50;
+                    case 1:
+                        return 150;
+                    case 2:
+                        return 350;
+                    case 3:
+                        return 750;
+                    case 4:
+                        return 1500;
+                    default:
+                        return 0;
+                }
+            }
+        }
+
         public static int Get_level() { return Math.Min(level,4); }
         public static void LevelUp() { level++; }
 

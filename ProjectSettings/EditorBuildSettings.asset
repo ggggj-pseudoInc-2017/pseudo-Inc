@@ -17,3 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Poperoom.unity
     guid: 0961f7181b20e8a4bbc9453f4cc52a91
+  - enabled: 1
+    path: Assets/Scenes/Happy.unity
+    guid: 1d39a1f866e076248ae8d50f6ce378bd
+  - enabled: 1
+    path: Assets/Scenes/Bad.unity
+    guid: ca565659adfbf3f47b43e35490685caf

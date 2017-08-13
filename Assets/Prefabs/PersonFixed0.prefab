@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 195047535238228228}
   m_Layer: 0
   m_Name: PersonFixed0
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
