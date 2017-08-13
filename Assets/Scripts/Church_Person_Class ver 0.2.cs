@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine;
 using System.Linq;
 using System.Text;
 
@@ -16,6 +17,7 @@ namespace pseudoinc
         private static int num_followers = 0;   // 총 신도 수
         private static int faith = 0;           // 신도들의 충성도 합
         private static int favor = 45;          // 비신도들에 대한 호감도
+        private static float time = 0f;
 
 
         // 변수들에 대한 접근 메서드를 public으로 선언
@@ -29,6 +31,9 @@ namespace pseudoinc
         public static int Get_favor()          { return favor; }
         public static void Set_favor(int favor_){ favor = favor_; }
         public static void Add_favor(int favor_){ favor += favor_; }
+
+        public static float GetTime() { return time; }
+        public static void SetTIme(float value) { time = value; }
         
         public static int Get_num_followers() { return num_followers; }
         public static void Add_follower(Follower follower)
@@ -167,26 +172,4 @@ namespace pseudoinc
         }
     }
 
-
-    class Upgrade
-    {
-        private const int money_increse = 50;
-        private const int follower_increse = 5;
-        private const int faith_increse = 20;
-        private const int favor_increse = 10;
-
-        private void Upgrade_gospel(int money, int num_follower, int offer, int faith, int favor)
-        {
-            Church.Add_money(money);
-            for(int i=0; i<num_follower; i++)
-            {
-                Church.Add_follower(new Follower());
-            }
-            Church.Increase_all_followers_offer(offer);
-            Church.Increase_all_followers_faith(faith);
-            Church.Add_favor(favor);
-        }
-
-
-    }
 }

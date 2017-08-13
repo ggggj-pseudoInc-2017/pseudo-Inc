@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -70,6 +71,15 @@ public class PlayerController : MonoBehaviour {
         else
         {
             player.GetComponent<Animator>().SetBool("isMoving", false);
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("church");
+        if(other.tag == "Church")
+        {
+            Debug.Log("getInside");
+            SceneManager.LoadScene(2);
         }
     }
 }
