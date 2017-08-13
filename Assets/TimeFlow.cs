@@ -9,6 +9,7 @@ public class TimeFlow : MonoBehaviour {
     public Text timeText;
     public Text money;
     public Text moneyToSend;
+    public Slider moneySlider;
 
     float time = 0f;
 
@@ -17,7 +18,11 @@ public class TimeFlow : MonoBehaviour {
     int NumGetFollower = 0;
 
     void Start () {
-		moneyToSend.text = "내야할 돈 : " + 50;
+
+        time = Church.GetTime();
+        moneySlider.value = 0;
+        moneySlider.maxValue = 50;
+        moneyToSend.text = "0 / 50";
     }
 	
 	void Update ()
@@ -25,8 +30,7 @@ public class TimeFlow : MonoBehaviour {
         time += Time.deltaTime;
         Church.SetTIme(time);
 
-        timeText.text = "시간 : " + time;
-        money.text = "현재 돈 : " + Church.Get_money();
+        timeText.text = "시간 : " + Mathf.RoundToInt(time);
 
         if(time/30f > NumGetMoney+1)
         {
@@ -41,18 +45,22 @@ public class TimeFlow : MonoBehaviour {
             {
                 case 1:
                     Church.Add_money(-50);
+                    moneySlider.maxValue = 250;
                     SetMoneyToSend(250);
                     return;
                 case 2:
                     Church.Add_money(-250);
+                    moneySlider.maxValue = 500;
                     SetMoneyToSend(500);
                     return;
                 case 3:
                     Church.Add_money(-500);
+                    moneySlider.maxValue = 1000;
                     SetMoneyToSend(1000);
                     return;
                 case 4:
                     Church.Add_money(-1000);
+                    moneySlider.maxValue = 2000;
                     SetMoneyToSend(2000);
                     return;
                 case 5:
@@ -65,7 +73,10 @@ public class TimeFlow : MonoBehaviour {
             }
         }
 
-        if(time/60 > NumGetFollower+1)
+        moneySlider.value = Mathf.Min(Church.Get_money(), moneySlider.maxValue);
+        moneyToSend.text = Church.Get_money() + " / " + moneySlider.maxValue;
+
+        if (time/60 > NumGetFollower+1)
         {
             NumGetFollower++;
             for (int i = 0; i < ((Church.Get_faith() - 10) / 100 * (Church.Get_favor() + 20) / 100); i++)
@@ -78,6 +89,7 @@ public class TimeFlow : MonoBehaviour {
                 }
             }
         }
+        
 
         if(Church.Get_money() < 0)
         {
@@ -87,7 +99,7 @@ public class TimeFlow : MonoBehaviour {
 
     void SetMoneyToSend(int money)
     {
-        moneyToSend.text = "내야할 돈 : " + money;
+        moneyToSend.text = Church.Get_money() + " / " + money;
     }
 
     void Win()

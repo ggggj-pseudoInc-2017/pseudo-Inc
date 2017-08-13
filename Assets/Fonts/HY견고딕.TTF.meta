@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 804973b5bf1b9a54083f89bcdede735b
+guid: d117a3bde6473dc4eb2c225c52a18b3a
 timeCreated: 1502541693
 licenseType: Free
 TrueTypeFontImporter:
@@ -12,7 +12,8 @@ TrueTypeFontImporter:
   fontName: HYGothic-Extra
   fontNames:
   - HYGothic-Extra
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 804973b5bf1b9a54083f89bcdede735b, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

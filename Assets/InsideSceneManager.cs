@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using pseudoinc;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class InsideSceneManager : MonoBehaviour {
 
@@ -76,5 +77,15 @@ public class InsideSceneManager : MonoBehaviour {
             GameObject newPerson = Instantiate(Persons[Random.Range(0, Persons.Length)]);
             newPerson.transform.position = positions[i].position;
         }
+    }
+
+    public void GoOut()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void GoIn()
+    {
+        SceneManager.LoadScene(3);
     }
 }

@@ -1,20 +1,14 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 555fc519f90eb43d0b659219afca3eca
-timeCreated: 1502541383
-licenseType: Pro
-=======
-guid: aff1b77efc85697478a162544ee8ca43
-timeCreated: 1502528719
+guid: c5fa8a041b00c1945a39d743f5ffe57d
+timeCreated: 1502558111
 licenseType: Free
->>>>>>> 67fdf3726bc18c2961fb5829991f14314e3facdb
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    400000: //RootNode
-    400002: default
+    100000: default
+    100002: //RootNode
+    400000: default
+    400002: //RootNode
     2300000: default
     3300000: default
     4300000: default

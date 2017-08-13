@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using pseudoinc;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -9,6 +10,10 @@ public class GameController : MonoBehaviour {
     public GameObject[] churches;
 
     public TimeFlow clock;
+
+    public Text timeText;
+    public Text moneyToSend;
+    public Slider moneySlider;
 
     int currentLevel = 0;
 
@@ -18,6 +23,15 @@ public class GameController : MonoBehaviour {
         {
             TimeFlow newClock = Instantiate(clock);
             DontDestroyOnLoad(newClock.gameObject);
+            newClock.moneySlider = moneySlider;
+            newClock.timeText = timeText;
+            newClock.moneyToSend = moneyToSend;
+        }
+        else
+        {
+            FindObjectOfType<TimeFlow>().moneySlider = moneySlider;
+            FindObjectOfType<TimeFlow>().timeText = timeText;
+            FindObjectOfType<TimeFlow>().moneyToSend = moneyToSend;
         }
         npcs = new List<NpcController>();
         for(int i = 0; i < 5; i++)
