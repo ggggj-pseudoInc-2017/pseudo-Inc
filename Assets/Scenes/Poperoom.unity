@@ -259,12 +259,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_13
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 13
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -567,7 +567,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC6B0\uC0C1\uC22D\uBC30\n\uB3C80\t\t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC131+1
+    \uD638\uAC10 -1\r"
 --- !u!222 &104207229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -651,12 +652,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_12
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -861,7 +862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uACBD\uC804 \uC791\uC131\n\uB3C8-250\t\t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC131+1\t\uD638\uAC10+1\r"
 --- !u!222 &162569402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1022,7 +1023,7 @@ RectTransform:
   - {fileID: 1688827569}
   - {fileID: 498079629}
   m_Father: {fileID: 1739076761}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1182,7 +1183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uB0A9\uCE58\uD3EC\uAD50\n\uB3C80 \uC2E0\uB3C4+2 \uC18C\uB4DD0 \uCDA9\uC1310\t\uD638\uAC10-3"
 --- !u!222 &295777764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1219,7 +1220,7 @@ RectTransform:
   m_Children:
   - {fileID: 1843245858}
   m_Father: {fileID: 544209956}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1266,12 +1267,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_3
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1462,12 +1463,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_10
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1736,14 +1737,14 @@ RectTransform:
   - {fileID: 180098758}
   - {fileID: 857838121}
   - {fileID: 892050404}
+  - {fileID: 391075233}
   - {fileID: 1926288869}
   - {fileID: 2042344101}
   - {fileID: 1772743524}
   - {fileID: 1607194690}
   - {fileID: 847282231}
-  - {fileID: 391075233}
   m_Father: {fileID: 1739076761}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1872,12 +1873,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_9
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1994,12 +1995,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_16
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 16
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2450,7 +2451,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC5F0\uC608\uC778\uC12D\uC678 \n\uB3C8-500      \t\uC2E0\uB3C4+3 \uC18C\uB4DD0
+    \    \uCDA9\uC1310   \uD638\uAC10+1\r"
 --- !u!222 &843344383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2487,7 +2489,7 @@ RectTransform:
   m_Children:
   - {fileID: 1890455402}
   m_Father: {fileID: 544209956}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2534,12 +2536,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_8
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2656,12 +2658,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_1
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2778,12 +2780,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_2
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2979,7 +2981,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uAD6C\uC138\uC8FC\n\uB3C8-150\t\t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC131+1\t\uD638\uAC100\r"
 --- !u!222 &1012122039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3151,7 +3153,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC2E0\uC758 \uACC4\uC2DC\n\uB3C8-400\t\t\uC2E0\uB3C4+2\t\uC18C\uB4DD0\t\uCDA9\uC131+1\t
+    \uD638\uAC100\r"
 --- !u!222 &1017561594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3264,7 +3267,7 @@ RectTransform:
   - {fileID: 1579937263}
   - {fileID: 1955269069}
   m_Father: {fileID: 1739076761}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3374,7 +3377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1194808911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3397,7 +3400,7 @@ RectTransform:
   - {fileID: 716259353}
   - {fileID: 91557614}
   m_Father: {fileID: 1739076761}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3516,7 +3519,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC790\uC120\uC784\uBB34\n\uB3C8-750 \uC2E0\uB3C40 \uC18C\uB4DD0 \uCDA9\uC1310
+    \uD638\uAC10+3"
 --- !u!222 &1202327759
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3600,12 +3604,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_14
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3856,7 +3860,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC885\uB9D0\uC608\uC5B8\n\uB3C80\t\t\uC2E0\uB3C4+3 \uC18C\uB4DD0\t\uCDA9\uC131+2\t\uD638\uAC10-2"
 --- !u!222 &1354194900
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3930,7 +3934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uBB34\uC548\uB2E8\uBB3C\n\uB3C8+500\t\uC2E0\uB3C40\t\uC18C\uB4DD-1\t\uCDA9\uC131+1\t\uD638\uAC10-2"
 --- !u!222 &1409605367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4169,12 +4173,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_15
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4403,7 +4407,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uCE90\uCE58\uC1A1 \n\uB3C8-400 \uC2E0\uB3C4+3 \uC18C\uB4DD0 \uCDA9\uC131+1
+    \uD638\uAC10+1\r"
 --- !u!222 &1604207001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4440,7 +4445,7 @@ RectTransform:
   m_Children:
   - {fileID: 843344381}
   m_Father: {fileID: 544209956}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4487,12 +4492,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_7
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4640,7 +4645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC131\uC804\n\uB3C8-250\t\t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC131+2\t\uD638\uAC10-2"
 --- !u!222 &1685740976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4928,11 +4933,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 2088309555}
   - {fileID: 208053400}
   - {fileID: 544209956}
   - {fileID: 1122041190}
   - {fileID: 1194808911}
-  - {fileID: 2088309555}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4971,7 +4976,7 @@ RectTransform:
   m_Children:
   - {fileID: 1604206999}
   m_Father: {fileID: 544209956}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5018,12 +5023,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_6
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5192,7 +5197,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uD569\uCC3D\uACE1\n\uB3C8-150\t\t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC131+1\t\uD638\uAC100\r"
 --- !u!222 &1843245860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5345,7 +5350,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uAE30\uC544\uB300\uCC45\n\uB3C8-500 \t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC1310\t\uD638\uAC10+2\r"
 --- !u!222 &1890455404
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5419,7 +5424,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uCF8C\uB77D\uC8FC\uC758\n\uB3C80\t\t\uC2E0\uB3C40\t\uC18C\uB4DD-1\t\uCDA9\uC131+1\t\uD638\uAC10+1\r"
 --- !u!222 &1892309599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5456,7 +5461,7 @@ RectTransform:
   m_Children:
   - {fileID: 1409605365}
   m_Father: {fileID: 544209956}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5503,12 +5508,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_4
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5859,7 +5864,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uBA74\uC8C4\uBD80 \uD310\uB9E4\n\uB3C8+750\t\uC2E0\uB3C40\t\uC18C\uB4DD-1\t\uCDA9\uC131+1\t\uD638\uAC10-3"
 --- !u!222 &2025022502
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5896,7 +5901,7 @@ RectTransform:
   m_Children:
   - {fileID: 2025022500}
   m_Father: {fileID: 544209956}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5943,12 +5948,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_5
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6018,7 +6023,7 @@ RectTransform:
   m_Children:
   - {fileID: 20293977}
   m_Father: {fileID: 1739076761}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -6228,12 +6233,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1437003375}
-        m_MethodName: Upgrade_gospel_11
-        m_Mode: 1
+        m_MethodName: UpgradeGospel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6340,7 +6345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC131\uC9C0\uC21C\uB840\n\uB3C8-150\t\t\uC2E0\uB3C40\t\uC18C\uB4DD0\t\uCDA9\uC131+1\t\uD638\uAC100"
 --- !u!222 &2143531746
 CanvasRenderer:
   m_ObjectHideFlags: 0

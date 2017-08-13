@@ -7,11 +7,45 @@ public class UpgradeController : MonoBehaviour {
 
     public void Upgrade_level() // 교회 레벨 업(꽃게)
     {
-        int current_level = Church.Get_level();
-        if (Church.Get_money() >= 500 * current_level)
+        int currentLevel = Church.Get_level();
+        switch(currentLevel)
         {
-            Church.Add_money(-500 * current_level);
-            Church.LevelUp();
+            case 0:
+                if (Church.Get_money() >= 50)
+                {
+                    Church.LevelUp();
+                    Church.Add_money(-50);
+                }
+                return;
+            case 1:
+                if (Church.Get_money() >= 150)
+                {
+                    Church.LevelUp();
+                    Church.Add_money(-150);
+                }
+                return;
+            case 2:
+                if (Church.Get_money() >= 350)
+                {
+                    Church.LevelUp();
+                    Church.Add_money(-350);
+                }
+                return;
+            case 3:
+                if (Church.Get_money() >= 750)
+                {
+                    Church.LevelUp();
+                    Church.Add_money(-750);
+                }
+                return;
+            case 4:
+                if (Church.Get_money() >= 1500)
+                {
+                    Church.LevelUp();
+                    Church.Add_money(-1500);
+                }
+                return;
+
         }
     }
 
@@ -27,52 +61,58 @@ public class UpgradeController : MonoBehaviour {
         Church.Add_favor(favor);
     }
 
-    public void Upgrade_gospel_1(){
-        Upgrade_gospel(-750, 0, 0, 0, 3);
-    }
-    public void Upgrade_gospel_2(){
-        Upgrade_gospel(0, 2, 0, 0, -3);
-    }
-    public void Upgrade_gospel_3(){
-        Upgrade_gospel(0, 0, 0, 0, 0);
-    }
-    public void Upgrade_gospel_4(){
-        Upgrade_gospel(500, 0, -1, 1, -2);
-    }
-    public void Upgrade_gospel_5(){
-        Upgrade_gospel(7500, 0, -1, 1, -3);
-    }
-    public void Upgrade_gospel_6(){
-        Upgrade_gospel(-400, 3, 0, 1, 1);
-    }
-    public void Upgrade_gospel_7(){
-        Upgrade_gospel(-500, 3, 0, 0, 1);
-    }
-    public void Upgrade_gospel_8(){
-        Upgrade_gospel(-500, 0, 0, 0, 2);
-    }
-    public void Upgrade_gospel_9(){
-        Upgrade_gospel(-150, 0, 0, 1, 0);
-    }
-    public void Upgrade_gospel_10(){
-        Upgrade_gospel(0, 0, -1, 1, 1);
-    }
-    public void Upgrade_gospel_11(){
-        Upgrade_gospel(-250, 0, 0, 2, -2);
-    }
-    public void Upgrade_gospel_12(){
-        Upgrade_gospel(-250, 0, 0, 1, 1);
-    }
-    public void Upgrade_gospel_13(){
-        Upgrade_gospel(-150, 0, 0, 1, 0);
-    }
-    public void Upgrade_gospel_14(){
-        Upgrade_gospel(-400, 2, 0, 1, 0);
-    }
-    public void Upgrade_gospel_15(){
-        Upgrade_gospel(0, 0, 0, 1, -1);
-    }
-    public void Upgrade_gospel_16(){
-        Upgrade_gospel(0, 3, 0, 2, -2);
+    public void UpgradeGospel(int i)
+    {
+        switch(i)
+        {
+            case 1:
+                Upgrade_gospel(-750, 0, 0, 0, 3);
+                return;
+            case 2:
+                Upgrade_gospel(0, 2, 0, 0, -3);
+                return;
+            case 3:
+                Upgrade_gospel(0, 0, 0, 0, 0);
+                return;
+            case 4:
+                Upgrade_gospel(500, 0, -1, 1, -2);
+                return;
+            case 5:
+                Upgrade_gospel(750, 0, -1, 1, -3);
+                return;
+            case 6:
+                Upgrade_gospel(-400, 3, 0, 1, 1);
+                return;
+            case 7:
+                Upgrade_gospel(-500, 3, 0, 0, 1);
+                return;
+            case 8:
+                Upgrade_gospel(-500, 0, 0, 0, 2);
+                return;
+            case 9:
+                Upgrade_gospel(-150, 0, 0, 1, 0);
+                return;
+            case 10:
+                Upgrade_gospel(0, 0, -1, 1, 1);
+                return;
+            case 11:
+                Upgrade_gospel(-250, 0, 0, 2, -2);
+                return;
+            case 12:
+                Upgrade_gospel(-250, 0, 0, 1, 1);
+                return;
+            case 13:
+                Upgrade_gospel(-150, 0, 0, 1, 0);
+                return;
+            case 14:
+                Upgrade_gospel(-400, 2, 0, 1, 0);
+                return;
+            case 15:
+                Upgrade_gospel(0, 0, 0, 1, -1);
+                return;
+            case 16:
+                Upgrade_gospel(0, 3, 0, 2, -2);
+                return;
+        }
     }
 }
