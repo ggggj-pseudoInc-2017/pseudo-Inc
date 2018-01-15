@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour {
 
     int currentLevel = 0;
 
+
+    // 깃헙 세미나용 테스트
 	void Start ()
     {
         if(FindObjectOfType<TimeFlow>() == null)
